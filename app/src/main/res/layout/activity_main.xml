@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/login_bg">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="20dp"
+            android:paddingTop="120dp">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/card_margin"
+                android:clickable="true"
+                android:elevation="3dp"
+                card_view:cardBackgroundColor="#E0E0E0"
+                card_view:cardCornerRadius="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/welcome_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/colorAccent"
+                        android:inputType="none" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.75dp"
+                        android:background="#BDBDBD"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:paddingTop="10dp"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:text="FROM"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <NumberPicker
+                                    android:id="@+id/from_time"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:descendantFocusability="blocksDescendants"/>
+                                <NumberPicker
+                                    android:id="@+id/from_ampm"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:paddingTop="10dp"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:text="TO"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <NumberPicker
+                                    android:id="@+id/to_time"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_height="wrap_content"/>
+                                <NumberPicker
+                                    android:id="@+id/to_ampm"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/check_fields_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check Available Fields"
+                android:textColor="#EEE"
+                android:background="@drawable/signup_style"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/or_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="---------OR---------"
+                android:gravity="center_horizontal"
+                android:paddingBottom="15dp"
+                android:textColor="#fff"
+                android:inputType="none" />
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="search"
+                android:textColor="#EEE"
+                android:background="@drawable/signup_style"/>
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    <fragment
+        android:id="@+id/nav_drawer_fragment"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_nav_drawer"
+        android:name="com.thejazz.finalscore.fragments.NavDrawerFragment"
+        tools:layout="@layout/fragment_nav_drawer" />
+</android.support.v4.widget.DrawerLayout>

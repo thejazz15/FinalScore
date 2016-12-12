@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_view_field"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:background="#E0E0E0"
+    tools:context="com.thejazz.finalscore.activities.ViewFieldActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="6dp"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:elevation="3dp"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="none" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="#BDBDBD"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/field_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="none" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="#BDBDBD"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/cost_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="none"
+                    android:text="@string/cost_per_hour"/>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="#BDBDBD"
+                    android:layout_marginBottom="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="18dp"
+                        android:textColor="#C62828"
+                        android:text="RESERVED TIMINGS"
+                        android:inputType="none" />
+                    <TextView
+                        android:id="@+id/booking_details_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="18dp"
+
+                        android:paddingBottom="15dp"
+                        android:textColor="#C62828"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="#BDBDBD"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:paddingTop="10dp"
+                            android:gravity="center"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"
+                            android:text="FROM"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <NumberPicker
+                                android:id="@+id/from_time"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:descendantFocusability="blocksDescendants"/>
+                            <NumberPicker
+                                android:id="@+id/from_ampm"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:descendantFocusability="blocksDescendants"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:paddingTop="10dp"
+                            android:gravity="center"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"
+                            android:text="TO"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <NumberPicker
+                                android:id="@+id/to_time"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:descendantFocusability="blocksDescendants"
+                                android:layout_height="wrap_content"/>
+                            <NumberPicker
+                                android:id="@+id/to_ampm"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:descendantFocusability="blocksDescendants"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            android:id="@+id/book_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:textColor="#EEE"
+            android:background="@drawable/signup_style"/>
+    </LinearLayout>
+</LinearLayout>
